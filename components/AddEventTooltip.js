@@ -3,12 +3,12 @@ import React, { useState } from "react";
 const AddEventTooltip = ({ position, onSave, onClose }) => {
   const [eventTitle, setEventTitle] = useState("");
   const [eventStartTime, setEventStartTime] = useState("");
-  const [eventEndTime, setEventEndTime] = useState(""); // Added endTime
+  const [eventEndTime, setEventEndTime] = useState("");
 
   const handleSave = () => {
     if (eventTitle && eventStartTime && eventEndTime) {
-      onSave(eventTitle, eventStartTime, eventEndTime); // Pass end time to onSave
-      onClose(); // Close after saving
+      onSave(eventTitle, eventStartTime, eventEndTime);
+      onClose();
     } else {
       alert("Please fill in title, start time, and end time.");
     }
@@ -26,7 +26,7 @@ const AddEventTooltip = ({ position, onSave, onClose }) => {
         padding: "20px",
         borderRadius: "8px",
         boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
-        width: "300px", // Increased width for a larger tooltip
+        width: "300px",
       }}
     >
       <button

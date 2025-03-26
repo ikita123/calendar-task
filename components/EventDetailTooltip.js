@@ -13,20 +13,20 @@ const EventDetailTooltip = ({
 
   const handleColorChange = (color) => {
     setSelectedColor(color);
-    onUpdateColor(event.id, color); // Update color when the color is selected
+    onUpdateColor(event.id, color);
   };
 
   const handleDelete = () => {
-    onDelete(event.id); // Delete event by id
-    onClose(); // Close the tooltip after deletion
+    onDelete(event.id);
+    onClose();
   };
 
   return (
     <div
       style={{
         position: "absolute",
-        top: `${position.top}px`, // Using passed position prop for tooltip positioning
-        left: `${position.left}px`, // Using passed position prop for tooltip positioning
+        top: `${position.top}px`,
+        left: `${position.left}px`,
         zIndex: 10,
         backgroundColor: "white",
         border: "1px solid #ddd",
@@ -50,7 +50,6 @@ const EventDetailTooltip = ({
         </p>
       </div>
 
-      {/* Color Update Section */}
       <div style={{ margin: "10px 0" }}>
         <label>Change Event Color:</label>
         <input
@@ -61,7 +60,6 @@ const EventDetailTooltip = ({
         />
       </div>
 
-      {/* Action Buttons */}
       <div
         style={{
           display: "flex",
